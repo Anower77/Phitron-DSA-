@@ -1,14 +1,12 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
+void fun(int *&p){
+    p = NULL;
+}
 int main() {
-  vector<int> v={1,2,3,4,5};
-v.erase(v.begin()+2, v.end());
-
-
-   for (int i = 0; i < v.size(); i++)
-    {
-        cout << v[i] << " ";
-    }
-   return 0;
+    int val = 10;
+    int *ptr = &val;
+    fun(ptr);
+    cout << *ptr << endl;
+    return 0;
 }
